@@ -6,7 +6,6 @@ namespace THelpers.Controllers
 {
     public class TagHelpersController : Controller
     {
-
         List<Product> products {get;} = new List<Product>
         {
             new Product {ProductId=1,Name="A"},
@@ -135,6 +134,30 @@ namespace THelpers.Controllers
                 TempData["Email"] = feedBackVM.Email;
                 TempData["Opinion"]=feedBackVM.Opinion;
                 return RedirectToAction("DisplayOpinion");
+            }
+            return View();
+        }
+
+        public IActionResult ValidationTagHelper(){
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ValidationTagHelper(FeedBackViewModel feedBackVM){
+            if(ModelState.IsValid)
+            {
+                TempData["Email"]=feedBackVM.Email;
+                TempData["Opinion"]=feedBackVM.Opinion;
+                return RedirectToAction("DisplayOpinion");
+            }else{
+                ModelState.AddModelError("ErrorReport","輸入的資料格式內容有誤!");
+                int idx = 1;
+                var errors = ModelState.Values.Select(err => err.Errors.FirstOrDefault().ErrorMessage).ToList();
+                errors.ForEach((error)=>
+                {
+                    ModelState.AddModelError($"Error{idx++}",error + ", 請重新輸入正確格式!");
+                });
             }
             return View();
         }

@@ -16640,6 +16640,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\TagHelpers\\ValidationTagHelper.cshtml",
+      "TargetPath": "Views\\TagHelpers\\ValidationTagHelper.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\TagHelpers\\InputTagHelper.cshtml",
       "TargetPath": "Views\\TagHelpers\\InputTagHelper.cshtml",
       "FileKind": "mvc"
