@@ -102,14 +102,40 @@ namespace THelpers.Controllers
             return View();
         }
 
+        public IActionResult MultiSelect(){
+            var model = new CountryGroupViewModel();
+            return View(model);
+        }
 
-        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult MultiSelect(CountryGroupViewModel countryVM){
+            if(ModelState.IsValid){
+                List<string> countries = new List<string>();
+                countryVM.CountryCodes.ToList().ForEach((x)=>{
+                    string countryName = countryVM.Countries.Where(c=>c.Value == x).Select(s=>s.Text).FirstOrDefault();
+                    countries.Add(countryName);
+                });
+                var selectedCountries = countryVM.CountryCodes.Select(x=>countryVM.Countries.Where(c=>c.Value==x).FirstOrDefault()).Select(p=>p.Text).ToList();
+                TempData["CountryList"] = countries;
+                return RedirectToAction("DisplayCountries");
+            }
+            return View();
+        }
+
+
         public IActionResult DisplayCountry(string country){
             if(string.IsNullOrEmpty(country)){
                 return Content("必須提供Country參數!");
             }
             ViewData["Country"] = country;
             return View();
+        }
+        public IActionResult DisplayCountries(){
+            if(!TempData.ContainsKey("CountryList")){
+                return Content("必須提供List集合資料");
+            }
+            return View((string[])TempData["CountryList"]);
         }
 
 

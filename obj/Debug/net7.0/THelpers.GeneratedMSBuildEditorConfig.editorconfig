@@ -92,6 +92,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnSGVscGVyc1xBbmNob3JUYWdIZWxwZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/gina7/THelpers/Views/TagHelpers/DisplayCountries.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnSGVscGVyc1xEaXNwbGF5Q291bnRyaWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/gina7/THelpers/Views/TagHelpers/DisplayCountry.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnSGVscGVyc1xEaXNwbGF5Q291bnRyeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -106,6 +110,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/gina7/THelpers/Views/TagHelpers/InputTagHelper.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnSGVscGVyc1xJbnB1dFRhZ0hlbHBlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gina7/THelpers/Views/TagHelpers/MultiSelect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnSGVscGVyc1xNdWx0aVNlbGVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gina7/THelpers/Views/TagHelpers/RegisterResult.cshtml]

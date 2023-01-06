@@ -1,0 +1,12 @@
+@model CountryGroupViewModel
+@{
+    ViewData["Title"] = "MultiSelect";
+}
+
+<form asp-action="MultiSelect" method="post">
+    <label asp-for="CountryCodes">請選擇國家:</label><br>
+    <select asp-for="CountryCodes" asp-items="Model.Countries" size="10"></select>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

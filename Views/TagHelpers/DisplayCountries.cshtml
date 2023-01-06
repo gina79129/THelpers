@@ -1,0 +1,14 @@
+@model string[]
+@{
+    ViewData["Title"] = "DisplayCountries";
+}
+<h3>你選擇的國家有:</h3>
+<ul>
+
+@foreach (var country in Model)
+{
+    <li>
+        @country;
+    </li>
+}
+</ul>

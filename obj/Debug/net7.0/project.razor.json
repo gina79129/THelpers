@@ -16655,6 +16655,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\TagHelpers\\DisplayCountries.cshtml",
+      "TargetPath": "Views\\TagHelpers\\DisplayCountries.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\Person\\About.cshtml",
       "TargetPath": "Views\\Person\\About.cshtml",
       "FileKind": "mvc"
@@ -16682,6 +16687,11 @@
     {
       "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\Person\\QueryPersonalData.cshtml",
       "TargetPath": "Views\\Person\\QueryPersonalData.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\TagHelpers\\MultiSelect.cshtml",
+      "TargetPath": "Views\\TagHelpers\\MultiSelect.cshtml",
       "FileKind": "mvc"
     },
     {
