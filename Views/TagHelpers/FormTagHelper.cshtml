@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "FormTagHelper";
+}
+
+<form asp-controller="Person" asp-action="PostData" method="post">
+    <input type="submit" value="Submit" class="btn btn-primary">
+</form>
+&emsp;&emsp;
+<form asp-route="PersonalData" method="post">
+    <input type="submit" value="Submit" class="btn btn-success">
+</form>
+&emsp;&emsp;
+<form asp-area="Identity" asp-page="/Accout/Logout" asp-route-returnUrl="@Url.Action("About","Person",new {area=""})">
+<button type="submit">submit</button></form>
+@* <form asp-area="Identity" asp-page="/Account/Logout"
+      asp-route-returnUrl="@Url.Action("About", "Person", new { area = "" })">
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form> *@

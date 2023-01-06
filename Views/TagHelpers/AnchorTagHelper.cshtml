@@ -1,0 +1,32 @@
+@model Product
+@{
+    ViewData["Title"] = "AnchorTagHelper";
+
+    var ProductParameters = new Dictionary<string,string>
+        {
+            {"ProductId","3"},
+            {"Available","true"}
+        };
+}
+@Html.ActionLink("FormTagHelper","FormTagHelper","TagHelpers") &emsp;｜
+@Html.ActionLink("FormActionTagHelper","FormActionTagHelper","TagHelpers") &emsp;｜
+@Html.ActionLink("InputTagHelper","InputTagHelper","TagHelpers") &emsp;｜
+<hr>
+<a asp-area="Blogs" asp-controller="Test" asp-action="About">Area的Blogs/Test/About</a> &emsp;｜
+<a asp-area="Blogs" asp-controller="Test" asp-action="Index">Area的Blogs/Test/Index</a> &emsp;｜
+<a asp-area="Blogs" asp-controller="Book" asp-action="Index">Area的Book/Book/Index</a> &emsp;｜
+<a asp-area="" asp-controller="Test" asp-action="Index">/Test/Index</a> &emsp;｜
+@Html.ActionLink("Area的Blogs/Test/About","About","Test",new{area="Blogs"}) &emsp;｜
+<a href='@Url.Action("About","Test",new {area="Blogs"})'>Area的Blogs/Test/About</a> &emsp;｜
+<a asp-controller="Product" asp-action="Details" asp-route-id="@Model.ProductId">/Product/Details Productid : @Model.ProductId</a> &emsp;｜
+@* <a asp-controller="Product" asp-action="Details">/Product/Details Productid : @Model.ProductId</a> &emsp;｜ *@
+<a asp-route="ProductEvals">Product Evaluations</a> &emsp;｜
+<a asp-route="ProductAvailable" asp-all-route-data="ProductParameters">Product Available</a> &emsp;｜
+<a asp-controller="Product" asp-action="Available" asp-route-productId="1" asp-route-available="true">用asp-route-{value}指定多個路由參數1</a>&emsp;｜
+<a asp-controller="Product" asp-action="Evals" asp-route-productId="2" asp-route-available="true">用asp-route-{value}指定多個路由參數2</a>&emsp;｜
+<a asp-route="ProductAvailable"asp-route-productId="3" asp-route-available="true">用asp-route-{value}指定多個路由參數3</a>&emsp;｜
+<a asp-route="ProductAvailable" asp-fragment="Description">Product Available + fragment</a>&emsp;｜
+<a asp-controller="Home" asp-action="About">Home/About</a>&emsp;｜
+<a asp-protocol="https" asp-controller="Home" asp-action="About">Home/About/HTTPS</a>&emsp;｜
+<a asp-protocol="http" asp-controller="Home" asp-action="About">Home/About/HTTP</a>&emsp;｜
+<a asp-protocol="https" asp-host="codemagic.com" asp-controller="Home" asp-action="About">Code Magic</a>
