@@ -1,0 +1,16 @@
+@model FeedBackViewModel
+@{
+    ViewData["Title"] = "TextareaTagHelper";
+}
+
+<form asp-controller="TagHelpers" asp-action="TextareaTagHelper" method="post">
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email">
+    </div>
+    <div class="form-group">
+        <label asp-for="Opinion"></label>
+        <textarea asp-for="Opinion" cols="40" rows="4"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">送出</button>
+</form>

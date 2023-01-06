@@ -123,6 +123,30 @@ namespace THelpers.Controllers
             return View();
         }
 
+        public IActionResult TextareaTagHelper(){
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult TextareaTagHelper(FeedBackViewModel feedBackVM)
+        {
+            if(ModelState.IsValid){
+                TempData["Email"] = feedBackVM.Email;
+                TempData["Opinion"]=feedBackVM.Opinion;
+                return RedirectToAction("DisplayOpinion");
+            }
+            return View();
+        }
+
+        public IActionResult DisplayOpinion(){
+            if(TempData.Count==0){
+                return Content("無任何資料");
+            }
+            return View();
+        }
+
+
 
         public IActionResult DisplayCountry(string country){
             if(string.IsNullOrEmpty(country)){

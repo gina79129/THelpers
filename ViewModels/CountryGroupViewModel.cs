@@ -11,7 +11,7 @@ namespace THelpers.ViewModels
 
         public List<SelectListItem> Countries {get;} = new List<SelectListItem>
         {
-            new SelectListItem { Text = "Mexico", Value= "MX", Group = NorthAmericaGroup},
+            new SelectListItem { Text = "   ", Value= "MX", Group = NorthAmericaGroup},
             new SelectListItem { Text = "Canada", Value= "CA", Group = NorthAmericaGroup,Selected=true},
             new SelectListItem { Text = "USA", Value= "US", Group = NorthAmericaGroup},
             new SelectListItem { Text = "France", Value= "FR", Group = EuropeGroup},

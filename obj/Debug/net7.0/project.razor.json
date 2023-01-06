@@ -16610,6 +16610,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\TagHelpers\\TextareaTagHelper.cshtml",
+      "TargetPath": "Views\\TagHelpers\\TextareaTagHelper.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\gina7\\THelpers\\Areas\\Blogs\\Views\\Book\\Index.cshtml",
       "TargetPath": "Areas\\Blogs\\Views\\Book\\Index.cshtml",
       "FileKind": "mvc"
@@ -16637,6 +16642,11 @@
     {
       "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\TagHelpers\\InputTagHelper.cshtml",
       "TargetPath": "Views\\TagHelpers\\InputTagHelper.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\TagHelpers\\DisplayOpinion.cshtml",
+      "TargetPath": "Views\\TagHelpers\\DisplayOpinion.cshtml",
       "FileKind": "mvc"
     },
     {
