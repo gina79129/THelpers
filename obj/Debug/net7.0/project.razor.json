@@ -16555,6 +16555,11 @@
   "RootNamespace": "THelpers",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\TagHelpers\\DisplayCountry.cshtml",
+      "TargetPath": "Views\\TagHelpers\\DisplayCountry.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\Product\\Available.cshtml",
       "TargetPath": "Views\\Product\\Available.cshtml",
       "FileKind": "mvc"
@@ -16632,6 +16637,11 @@
     {
       "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\TagHelpers\\InputTagHelper.cshtml",
       "TargetPath": "Views\\TagHelpers\\InputTagHelper.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\TagHelpers\\SelectTagHelper.cshtml",
+      "TargetPath": "Views\\TagHelpers\\SelectTagHelper.cshtml",
       "FileKind": "mvc"
     },
     {

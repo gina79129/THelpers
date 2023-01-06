@@ -55,5 +55,28 @@ namespace THelpers.Controllers
             return View();
         }
 
+        public IActionResult SelectTagHelper(){
+            var model = new CountryViewModel();
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SelectTagHelper(CountryViewModel countryVM){
+            if(ModelState.IsValid){
+                string countryCode = countryVM.Country;
+                string country = countryVM.Countries.Where(c=>c.Value == countryCode).Select(x=>x.Text).FirstOrDefault();
+                return RedirectToAction("DisplayCountry",new{Country=country});
+            }
+            return View(countryVM);
+        }
+
+        public IActionResult DisplayCountry(string country){
+            if(string.IsNullOrEmpty(country)){
+                return Content("必須提供Country參數!");
+            }
+            ViewData["Country"] = country;
+            return View();
+        }
     }
 }
