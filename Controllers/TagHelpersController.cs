@@ -71,13 +71,6 @@ namespace THelpers.Controllers
             return View(countryVM);
         }
 
-        public IActionResult DisplayCountry(string country){
-            if(string.IsNullOrEmpty(country)){
-                return Content("必須提供Country參數!");
-            }
-            ViewData["Country"] = country;
-            return View();
-        }
 
         public IActionResult SelectEnum(){
             var model = new CountryEnumViewModel();
@@ -93,6 +86,33 @@ namespace THelpers.Controllers
             }
             return View();
         }
+
+        public IActionResult SelectOptionGroup(){
+            var model = new CountryGroupViewModel();
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SelectOptionGroup(CountryGroupViewModel countryVM){
+            if(ModelState.IsValid){
+                var country= countryVM.Countries.Where(c=>c.Value==countryVM.Country).Select(x=>x.Text).FirstOrDefault();
+                return RedirectToAction("DisplayCountry", new {Country = country});
+            }
+            return View();
+        }
+
+
+        
+        public IActionResult DisplayCountry(string country){
+            if(string.IsNullOrEmpty(country)){
+                return Content("必須提供Country參數!");
+            }
+            ViewData["Country"] = country;
+            return View();
+        }
+
+
         
     }
 }

@@ -1,0 +1,13 @@
+@model CountryGroupViewModel
+@{
+    ViewData["Title"] = "SelectOptionGroup";
+}
+
+<form asp-controller="TagHelpers" asp-action="SelectOptionGroup" method="post">
+    <select asp-for="Country" asp-items="Model.Countries">
+        <span asp-validation-for="Country" class="text-danger"></span>
+        <br><br>
+    </select>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
