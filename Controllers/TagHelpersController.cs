@@ -41,6 +41,8 @@ namespace THelpers.Controllers
             if(ModelState.IsValid){
                 TempData["Email"] = registerVM.Email;
                 TempData["Password"] = registerVM.Password;
+
+                return RedirectToAction("RegisterResult");
             }
 
             return View(registerVM);

@@ -7,6 +7,7 @@ namespace THelpers.Controllers
 
         public IActionResult RegisterResult()
         {
+
             return View();
         }
     }

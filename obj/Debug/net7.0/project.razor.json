@@ -16590,6 +16590,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\TagHelpers\\RegisterResult.cshtml",
+      "TargetPath": "Views\\TagHelpers\\RegisterResult.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
