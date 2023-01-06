@@ -78,5 +78,21 @@ namespace THelpers.Controllers
             ViewData["Country"] = country;
             return View();
         }
+
+        public IActionResult SelectEnum(){
+            var model = new CountryEnumViewModel();
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SelectEnum(int EnumerateCountry)
+        {
+            if(ModelState.IsValid){
+                return RedirectToAction("DisplayCountry",new{Country = (CountryEnum)EnumerateCountry});
+            }
+            return View();
+        }
+        
     }
 }

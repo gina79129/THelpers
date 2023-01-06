@@ -16665,6 +16665,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\TagHelpers\\SelectEnum.cshtml",
+      "TargetPath": "Views\\TagHelpers\\SelectEnum.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"

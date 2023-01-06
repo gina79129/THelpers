@@ -1,0 +1,14 @@
+@model CountryEnumViewModel
+@{
+    ViewData["Title"] = "SelectEnum";
+}
+
+<form asp-controller="TagHelpers" asp-action="SelectEnum" method="post">
+    <select asp-for="EnumerateCountry" asp-items="Html.GetEnumSelectList<CountryEnum>()">
+        <option value="">==請選擇國家==</option>
+    </select>
+    <span asp-validation-for="EnumerateCountry" class="text-danger"></span>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+
