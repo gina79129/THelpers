@@ -16555,6 +16555,11 @@
   "RootNamespace": "THelpers",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\TagHelpers\\EnvironmentTagHelper.cshtml",
+      "TargetPath": "Views\\TagHelpers\\EnvironmentTagHelper.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\TagHelpers\\DisplayCountry.cshtml",
       "TargetPath": "Views\\TagHelpers\\DisplayCountry.cshtml",
       "FileKind": "mvc"

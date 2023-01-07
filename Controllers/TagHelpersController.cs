@@ -165,6 +165,11 @@ namespace THelpers.Controllers
         public IActionResult CacheTagHelper(){
             return View();
         }
+        public IActionResult EnvironmentTagHelper(){
+            return View();
+        }
+
+
         public IActionResult DisplayOpinion(){
             if(TempData.Count==0){
                 return Content("無任何資料");

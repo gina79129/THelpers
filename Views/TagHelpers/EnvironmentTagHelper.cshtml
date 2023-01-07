@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "EnvironmentTagHelper";
+}
+@* Environment標籤協助程式依現有裝載(Hosting)環境的不同，而有條件轉譯輸出其所包含的內容 *@
+@* 而Environment環境值會與IHostingEnvironment.EnvironmentName值做比較，並忽略大小寫 *@
+@* names & include的功能相同 *@
+
+<environment include="Staging,Develop">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
+</environment>
+
+<environment names="Staging,Develop">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
+</environment>
+
+@* exclude 排除的裝載環境 *@
+<environment exclude="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
+</environment>
+@* 何時會用到「環境」標籤協助程式? 最經典的就是ASP.NET Core 2.2的 _Layout.cshtml會依主機環境不同
+   而決定從本機或CDN載入css及js函式庫*@
+
+@* Development環境從本機載入css參考 *@
+<environment include="Development">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
+</environment>
+
+@* Development以外環境從CDN載入css參考 *@
+<environment exclude="Development">
+    <link rel="stylesheet" href="https://stachpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+     asp-fallback-asp-fallback-test-class="sr-only"
+     asp-fallback-test-property="position"
+     asp-fallback-test-value="absolute"
+     crossorigin="anonymous"
+     integrity="sha384-...">
+</environment>
+
+
