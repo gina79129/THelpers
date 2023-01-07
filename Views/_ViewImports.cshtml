@@ -54,6 +54,22 @@
       ☆若要針對Views下某個控制器對應的資料夾作移除，例如在Home控制器的檢視資料夾加入_ViewImports.cshtml，並設定:
       Views/Home/_Viewimports.cshtml
       @removeTahHelper *, Microsoft.AspNetCore.Mvc.TagHelpers    
+
+      ★用_ViewImports.cshtml控制Tag Helpers套用範圍
+      前面提到在_ViewImports.cshtml中宣告@addTagHelper與@removeTagHelper語法，而_ViewImports.cshtml可在兩個層級建立:
+        ■Views/_ViewImports.cshtml(對Views資料夾下所有檢視作用)
+        ■Views/{controller}/_ViewImports.cshtml(控制器資料夾下所有檢視作用)
+
+      在不同層級宣告，Tag Helpers套用範圍便會不同，以@addTagHelper來說有三種範圍設定方式:
+        ■在個別View直接宣告@addTagHelper(只對該View檢視有影響)
+        ■Views/_ViewImports.cshtml中宣告@addTagHelper
+        ■Views/{controller}/_ViewImports.cshtml宣告@addTagHelper
+
+      ★以@tagHelperPrefix 明確啟用Tag Helpers
+      若不想讓HTML elements自動啟用Tag Helpers，直到明確使用自訂的前綴字串，才啟用Tag Helpers支援，
+      可用@tagHelperPrefix設定
+       
+      @tagHelperPrefix tag:
        *@
 
 
