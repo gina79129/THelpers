@@ -1,4 +1,59 @@
 ﻿@using THelpers
 @using THelpers.Models
+
+@* 預設Tag Helpers會套用到專案所有Views，讓Views皆能使用標籤協助程式，是因為_ViewImports.cshtml
+   中  @addTagHelper *, Microsoft.AspNetCore.Mvc.Taghelpers 的設定 *@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @using THelpers.ViewModels
+
+@* Tag Helpers也能做加入、移除和退出的調整:
+   1.@addTagHelper:加入標籤協助程式
+   2.@removeTagHelper:移除標籤協助程式
+   3.!退出字元:個別element退出標籤協助程式 *@
+
+@* 使用@addTagHelper加入標籤協助程式
+   除了專案預設外，何時會用到@addTagHelper加入標籤協助程式?有幾種情況:
+   1.加入自訂的標籤協助程式
+   2.限定View或View資料夾加入內建或自訂標籤協助程式
+
+   例如CustomTagHelpers專案自訂了Tag Helpers，在_ViewImport.cshtml引用的語法
+   @addTagHelper *, CustomTagHelpers
+     說明:*星號使用組件中所有的Tag Helpers
+          CustomTagHelpers 為自訂組件名稱
+
+          1.@addTagHelper是加入ASP.NET Core內建的所有Tag Helpers
+          2.*星號是加入CustomTagHelpers組件中所有Tag Helpers
+          3.在_ViewImport.cshtml用@addTagHelper加入標籤協助程式，是因為_ViewImport.cshtml會被
+          所在目錄中所有Views繼承，讓所有Views皆可使用Tag Helpers
+    *@
+
+    @* 若只想引用自訂組件中的Email Tag Helper，只需將星號替換成完整名稱(FQN，Fully Qualified Name) 
+        @addTagHelper CustomTagHelpers.TagHelpers.EmailTagHelper, CustomTagHelpers
+
+        也可在FQN插入 * 星號萬用字元作為尾碼:
+        @addTagHelper CustomTagHelpers.TagHelpers.E*, CustomTagHelpers
+        @addTagHelper CustomTagHelpers.TagHelpers.Email*, CustomTagHelpers
+    *@
+
+    @*使用@removeTagHelper移除標籤協助程式
+      @removeTagHelper是用來移除標籤協助程式，以下介紹幾種移除情境。
+      
+      ☆個別View移除內建的Anchor TagHelper(在檢視.cshtml中移除) :
+      @removeTagHelper Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper, Microsoft.AspNetCore.mvc.TagHelper
+
+      ☆個別View移除自訂EmailTagHelper(在檢視.cshtml中移除) :
+      @removeTagHelper CustomTahHelpers.TagHelpers.EmailTagHelper, CustomTagHelpers
+
+      ☆個別View移除全部內建的Tag Helpers(在檢視.cshtml中移除):
+      @removeTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+      ☆針對所有Views作移除，是在_ViewImport.cshtml中宣告:
+      Views/_ViewImports.cshtml
+      @removeTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers  
+
+      ☆若要針對Views下某個控制器對應的資料夾作移除，例如在Home控制器的檢視資料夾加入_ViewImports.cshtml，並設定:
+      Views/Home/_Viewimports.cshtml
+      @removeTahHelper *, Microsoft.AspNetCore.Mvc.TagHelpers    
+       *@
+
+
