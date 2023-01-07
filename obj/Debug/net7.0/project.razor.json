@@ -16733,6 +16733,11 @@
       "FilePath": "c:\\Users\\gina7\\THelpers\\Areas\\Blogs\\Views\\Test\\About.cshtml",
       "TargetPath": "Areas\\Blogs\\Views\\Test\\About.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gina7\\THelpers\\Views\\TagHelpers\\CacheTagHelper.cshtml",
+      "TargetPath": "Views\\TagHelpers\\CacheTagHelper.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"

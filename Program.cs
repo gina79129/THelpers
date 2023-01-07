@@ -2,7 +2,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDistributedMemoryCache();
+//分散式SQLServer快取
+// builder.Services.AddDistributedSqlServerCache(options =>
+// {
+//     options.ConnectionString = builder.Configuration.GetConnectionString(
+//         "DistCache_ConnectionString");
+//     options.SchemaName = "dbo";
+//     options.TableName = "TestCache";
+// });
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
